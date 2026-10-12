@@ -29,7 +29,29 @@ $: arrange(
     [2, chords[3]],
     [1, chords[1]],
     [1, "-"],
+    [2, chords[0]],
+    [1, chords[1]],
+    [2, chords[0]],
+    [1, chords[1]],
+    [2, chords[2]],
+    [1, chords[1]],
+    [2, chords[0]],
+    [1, chords[1]],
+    [2, chords[3]],
+    [1, chords[1]],
+    [1, "-"],
     
+    [2, chords[4]],
+    [1, chords[5]],
+    [2, chords[4]],
+    [1, chords[5]],
+    [2, chords[6]],
+    [1, chords[5]],
+    [2, chords[4]],
+    [1, chords[5]],
+    [2, chords[7]],
+    [1, chords[5]],
+    [1, "-"],
     [2, chords[4]],
     [1, chords[5]],
     [2, chords[4]],
@@ -53,4 +75,46 @@ $: arrange(
     [2, chords[10]],
     [1, chords[9]],
     [1, "-"],
+    [2, chords[8]],
+    [1, chords[9]],
+    [2, chords[8]],
+    [1, chords[9]],
+    [2, chords[10]],
+    [1, chords[9]],
+    [2, chords[8]],
+    [1, chords[9]],
+    [2, chords[10]],
+    [1, chords[9]],
+    [1, "-"],
 ).note().sound("gm_acoustic_guitar_nylon").release(2)
+
+
+const melody = `<
+f4 d#4 a#3 d#3 -
+g4 d#4 a#3 d#3 -
+g#4 d#4 a#3 d#3 -
+-
+f4 d#4 a#3 d#3 -
+g4 d#4 a#3 d#3 -
+g#4 d#4 a#3 d#3 -
+-
+c#4 g#3 f3 c#3 -
+c4 g#3 f3 c#3 -
+d#4 g#3 f3 c#3 -
+-
+c#4 g#3 f3 c#3 -
+c4 g#3 f3 c#3 -
+d#4 g#3 f3 c#3 -
+-
+g#4 d#4 g#3 d#3 -
+f4 c4 a#3 d#3 -
+f4 c4 a#3 d#3 -
+-
+g#4 d#4 g#3 d#3 -
+f4 c4 a#3 d#3 -
+f4 c4 a#3 d#3 -
+-
+>`;
+$: arrange(
+    [16*6, melody]
+).note().sound("piano").release(1).gain("0.5".pow(2))
