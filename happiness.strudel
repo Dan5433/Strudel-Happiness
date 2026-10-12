@@ -116,5 +116,18 @@ f4 c4 a#3 d#3 -
 -
 >`;
 $: arrange(
-    [16*6, melody]
+    [16*6, "-"],
+    [16*6, melody],
 ).note().sound("piano").release(1).gain("0.5".pow(2))
+
+
+const drums = `
+<bd>
+,
+<- sd>
+`;
+$: arrange(
+    [16*6*2, "-"],
+    [16*6, drums.slow(2)],
+).sound().gain("0.4".pow(2))
+
