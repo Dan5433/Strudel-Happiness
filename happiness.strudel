@@ -118,7 +118,7 @@ f4 c4 a#3 d#3 -
 $: arrange(
     [16*6, "-"],
     [16*6, melody],
-).note().sound("piano").release(1).gain("0.5".pow(2))
+).note().sound("piano").release(1).gain("0.6".pow(2))
 
 
 const drums = `
@@ -131,3 +131,8 @@ $: arrange(
     [16*6, drums.slow(2)],
 ).sound().gain("0.4".pow(2))
 
+
+const bass = `<
+d#2 c#2 g#2
+>/1.5`
+$: note(bass).sound("gm_acoustic_bass:1").gain("0.7".pow(2))
